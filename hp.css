@@ -1,5 +1,8 @@
 #container{
     height: 20000px ;
+     display: block;
+     margin: 0px;
+     padding: 0px;
 }
 .top{ background-color: aqua;
       width: 100%;
@@ -8,6 +11,7 @@
       top: 0px;
       left: 0px;
       display: flex;
+      z-index: 1000;
 }
 #icon{
     display: inline-block;
@@ -46,4 +50,141 @@
     border-radius: 8px ;
      border-color: aqua;
    
+}
+.card{
+    display: inline-block;
+    background-color: blue;
+    width: 30% ;
+    border-radius: 8px ;
+    margin: 10px 0px ;
+    height: 150px;
+    box-shadow: 10px 10px 0px 0px red;
+}    
+#conta{  display: flex;
+        width: 100%;
+        height: 300px;
+        justify-content: space-evenly;
+        background-color: blueviolet;
+        margin: 0px ;
+        padding: 0px ; 
+        position: absolute ;
+        left: 0px;
+        top: 600px ;
+}
+.slider{
+    width: 100%;
+    height:400px; 
+    background-color: blue;
+    z-index: 1;
+    position: absolute ;
+    left: 0px;
+    top: 100px ;
+    margin: 0px;
+    overflow:hidden;
+}
+#chatbot{
+   
+    width: 150px;
+    height: 50px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    /* border: 2px solid red; */
+    border-radius: 8px;
+    background-color: blueviolet;
+   
+}
+#chatbot p{
+       font-size: 25px;
+       text-align: center;
+}
+
+
+#slides{
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+.slide{
+ width: 25%;
+ transition: 1s;   
+ background-color: red;
+}
+#slides input{
+   display: none;
+}
+.slide img{
+    width: 100%;
+    height: 400px;
+}
+.nav-man{
+    position:absolute ;
+    display: flex;
+    z-index: 200;
+    height: 50px ;
+    width : 100%; 
+    bottom: 0px;
+    left: 0px;
+    border: 0px;
+    justify-content: center;
+}
+.radiobtn{
+    border: 2px solid aqua ;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 20px; 
+    transition: 1s;
+    height: 2px;
+    position: relative;
+    top: 20px;
+    margin: 5px;
+    width: 2px;
+}
+.radiobtn:hover{
+    background-color:aqua;
+}
+
+#radio1:checked ~ #slide-1{
+    margin-left: 0px;
+}
+#radio2:checked ~ #slide-1{
+    margin-left: -25%;
+}
+#radio3:checked ~ #slide-1{
+    margin-left: -50%;
+}
+#radio4:checked ~ #slide-1{
+    margin-left: -75%;
+}
+
+#radio1:checked ~ .nav-man #auto1{
+    background: aqua;
+}
+#radio2:checked ~ .nav-man #auto2{
+    background: aqua;
+}
+#radio3:checked ~ .nav-man #auto3{
+    background: aqua;
+}
+#radio4:checked ~ .nav-man #auto4{
+    background: aqua;
+}
+.cardslider{
+    display: grid ;
+    position: absolute;
+    top: 1000px;
+    left: 0px;
+    grid-template-columns: repeat(auto-fit,minmax(300px,300px)) ;
+    grid-row-gap: 20px;
+    grid-column-gap: 40px;
+    background-color: aqua;
+    padding: 20px ; 
+    margin: 0px;
+    width: 100%;
+}
+.cardbox{
+   border: 2px solid black ;
+   background-color: blue;
+   padding: 30px ; 
+   height: 200px;
 }
